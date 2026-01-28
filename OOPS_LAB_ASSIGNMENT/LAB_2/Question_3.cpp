@@ -1,5 +1,6 @@
 #include <iostream>
 #include <time.h>
+#include <string>
 using namespace std;
 
 enum class Suit{
@@ -45,7 +46,7 @@ class Card{
                 case Suit::HEARTS : return "HEARTS";
                 case Suit::SPADES : return "SPADES";
                 case Suit::DIAMONDS : return "DIAMONDS";
-                default : return "Invalid Suit";
+                default : return "INVALID";
             }
         }
 
