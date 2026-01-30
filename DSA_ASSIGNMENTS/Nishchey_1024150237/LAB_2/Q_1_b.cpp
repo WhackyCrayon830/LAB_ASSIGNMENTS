@@ -1,7 +1,7 @@
 /*
 Name           : Nishchey Singh
 Roll Number    : 1024150237
-Question       : Insertion at the start of the array
+Question       : Insertion at the end of an array
 Acknowledgment : https://www.w3schools.com/cpp/cpp_ref_reference.asp,
                  https://www.geeksforgeeks.org/cpp/c-plus-plus/,
                  https://www.udemy.com/course/datastructurescncpp/
@@ -22,10 +22,9 @@ int main() {
     cout << "Enter value to enter: ";
     cin >> data;
 
-    //creating a new arr and adding stuff
     IntArray temp(arr.getSize() + 1);
-    temp.copyData(arr, 1);
-    temp[0] = data;
+    temp.copyData(arr, 0);
+    temp[arr.getSize()] = data;
 
     temp.print();
     return 0;

@@ -11,7 +11,7 @@ private:
     int size;
 
 public:
-    explicit IntArray(int n) : size(n), data(new int[n]{}) {}
+    IntArray(int n) : size(n), data(new int[n]{}) {}
 
     ~IntArray() {
         delete[] data;
