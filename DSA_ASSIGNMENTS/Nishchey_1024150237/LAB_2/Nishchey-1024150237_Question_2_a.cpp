@@ -1,7 +1,7 @@
 /*
 Name           : Nishchey Singh
 Roll Number    : 1024150237
-Question       : Insertion at the end of an array
+Question       : Linear search on an array;
 Acknowledgment : https://www.w3schools.com/cpp/cpp_ref_reference.asp,
                  https://www.geeksforgeeks.org/cpp/c-plus-plus/,
                  https://www.udemy.com/course/datastructurescncpp/
@@ -9,23 +9,19 @@ Acknowledgment : https://www.w3schools.com/cpp/cpp_ref_reference.asp,
 */
 
 #include <iostream>
-#include "../LIBRARY/IntArray.h"
-
 using namespace std;
 
 int main() {
-    int data;
-    IntArray arr(7);
-    arr = {1, 2, 3, 4, 5, 6, 7};
-    
-    //User input
-    cout << "Enter value to enter: ";
-    cin >> data;
 
-    IntArray temp(arr.getSize() + 1);
-    temp.copyData(arr, 0);
-    temp[arr.getSize()] = data;
+    int arr[] = {0, 3, 6, 7, 2, 5, 9, 8};
 
-    temp.print();
+    int target;
+    cout << "Enter the target: ";
+    cin >> target;
+
+    for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++) {
+        if (arr[i] == target)
+        cout << "Target found at idx: " << i << " -> pos: " << i+1 << endl;
+    }
     return 0;
 }
