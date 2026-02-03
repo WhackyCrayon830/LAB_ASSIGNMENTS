@@ -4,15 +4,18 @@ using namespace std;
 
 int main() {
     int h;
-    cout << "Enter height of the simple pyramid: ";
+    cout << "Enter height of the alphabet pyramid: ";
     cin >> h;
+
+    int integer = 65;
 
     char arr[h][h];
     memset(arr, ' ', sizeof(arr));
 
-    for (int i = 0; i <= h; i++) {
-        for (int j = 0; j <= i; j++){
-            arr[i][j] = '*';
+    for (int i = 0; i < h; i++) {
+        for (int j = 0; j < i+1; j++){
+            arr[i][j] = char(integer);
+            integer++;
         }  
     }
     

@@ -10,8 +10,14 @@ int main() {
     char arr[h][h];
     memset(arr, ' ', sizeof(arr));
 
-    for (int i = 0; i < h; i++) {
+    for (int i = 0; i < (h+1)/2; i++) {
         for (int j = h-1; j >= h-i-1; j--){
+            arr[i][j] = '*';
+        }  
+    }
+    
+    for (int i = (h+1)/2; i <= h; i++) {
+        for (int j = h-1; j >= i; j--){
             arr[i][j] = '*';
         }  
     }
