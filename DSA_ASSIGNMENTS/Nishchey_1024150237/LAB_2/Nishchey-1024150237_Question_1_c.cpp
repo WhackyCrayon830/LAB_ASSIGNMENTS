@@ -21,7 +21,7 @@ int main() {
 
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arr_length = sizeof(arr)/sizeof(arr[0]);
-    int temp[arr_length + 1];
+    int *temp = new int[arr_length + 1];
 
     int idx;
     cout << "Enter the location of insertion: ";
