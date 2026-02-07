@@ -22,7 +22,7 @@ void traverse(const Node *head) {
     cout << temp->data;
 }
 
-Node *reverse(Node *head, int key) {
+Node *reverse(Node *head) {
     Node *prev = nullptr;
     Node *next = nullptr;
     Node *curr = head;
@@ -45,7 +45,7 @@ int main() {
     cout << "LL: " << endl;
     traverse(head);
     cout << endl << endl;
-    head = reverse(head, 4);
+    head = reverse(head);
     cout << "Reverse LL: " << endl;
     traverse(head);
     return 0;
