@@ -13,8 +13,8 @@ class Node {
     ~Node() {}
 };
 
-bool checkSorted(Node *head) {
-    Node *temp = head;
+bool checkSorted(const Node *head) {
+    const Node *temp = head;
     while (temp->next != nullptr) {
         if (temp->data > temp->next->data) {
             return false;
