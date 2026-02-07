@@ -1,26 +1,25 @@
 #include <iostream>
 using namespace std;
 
-class Node{
-    public:
+class Node {
+  public:
     int data;
     Node *next;
 
-    Node(int val){
+    Node(int val) {
         data = val;
         next = nullptr;
     }
-    ~Node(){}
-
+    ~Node() {}
 };
 
-void traversal_search(const Node *head, int key){
+void traversal_search(const Node *head, int key) {
     const Node *temp = head;
     int count = 0;
 
-    while (temp != nullptr){
+    while (temp != nullptr) {
         count++;
-        if (temp->data == key){
+        if (temp->data == key) {
             cout << "Element found at node: " << count << endl;
             temp = temp->next;
             break;

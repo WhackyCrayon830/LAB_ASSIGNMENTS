@@ -7,7 +7,7 @@ int main() {
 
     int max = -99999, min = 99999;
 
-    for (int i = 0; i < arr.size(); i++){
+    for (int i = 0; i < arr.size(); i++) {
         max = arr[i] > max ? arr[i] : max;
         min = arr[i] < min ? arr[i] : min;
     }

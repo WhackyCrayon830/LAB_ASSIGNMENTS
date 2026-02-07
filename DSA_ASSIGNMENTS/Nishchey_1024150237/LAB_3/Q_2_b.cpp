@@ -1,24 +1,23 @@
 #include <iostream>
 using namespace std;
 
-class Node{
-    public:
+class Node {
+  public:
     int data;
     Node *next;
 
-    Node(int val){
+    Node(int val) {
         data = val;
         next = nullptr;
     }
-    ~Node(){}
-
+    ~Node() {}
 };
 
-void count_sum(const Node *head){
+void count_sum(const Node *head) {
     int sum = 0;
     int count = 0;
     const Node *temp = head;
-    while (temp != nullptr){
+    while (temp != nullptr) {
         count++;
         sum += temp->data;
         temp = temp->next;

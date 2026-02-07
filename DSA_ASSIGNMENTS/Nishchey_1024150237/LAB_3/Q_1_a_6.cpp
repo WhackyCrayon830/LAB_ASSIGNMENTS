@@ -5,12 +5,12 @@ Question       : Pair to sum in Sorted array
 Acknowledgment : https://www.w3schools.com/cpp/cpp_ref_reference.asp,
                  https://www.geeksforgeeks.org/cpp/c-plus-plus/,
                  https://www.udemy.com/course/datastructurescncpp/
-                 
+
 */
 
 #include <iostream>
-#include <vector>
 #include <unordered_set>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -24,12 +24,11 @@ int main() {
     cout << "Enter value of target sum: ";
     cin >> k;
 
-    for (int i = 0; i < arr.size(); i++){
-        if ((arr[left] + arr[right]) == k){
+    for (int i = 0; i < arr.size(); i++) {
+        if ((arr[left] + arr[right]) == k) {
             cout << "Pair: " << arr[left] << " + " << arr[right] << endl;
             return 0;
-        }    
-        else if ((arr[left] + arr[right]) < k)
+        } else if ((arr[left] + arr[right]) < k)
             left++;
         else if ((arr[left] + arr[right]) > k)
             right--;
