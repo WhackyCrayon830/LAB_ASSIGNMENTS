@@ -36,6 +36,7 @@ class OrderList {
 
   public:
     OrderList() : head(nullptr), size(0) {}
+    ~OrderList() {}
 
     void addOrder(int price);
     void deleteOrder(int id);
