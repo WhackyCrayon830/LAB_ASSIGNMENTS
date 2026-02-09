@@ -12,7 +12,7 @@ class Dummy {
         cout << "Second: " << second << endl;
     }
 
-    friend void swap(Dummy &obj); // Only declaration
+    friend void swap(Dummy &obj);
 };
 
 void swap(Dummy &obj) {
