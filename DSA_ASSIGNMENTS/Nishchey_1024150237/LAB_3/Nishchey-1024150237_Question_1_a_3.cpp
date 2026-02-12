@@ -1,3 +1,13 @@
+/*
+Name           : Nishchey Singh
+Roll Number    : 1024150237
+Question       : Union & Intersection of two arrays
+Acknowledgment : https://www.w3schools.com/cpp/cpp_ref_reference.asp,
+                 https://www.geeksforgeeks.org/cpp/c-plus-plus/,
+                 https://www.udemy.com/course/datastructurescncpp/
+                 
+*/
+
 #include <iostream>
 #include <vector>
 #include <unordered_map>
