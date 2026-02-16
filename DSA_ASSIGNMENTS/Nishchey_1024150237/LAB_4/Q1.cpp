@@ -78,7 +78,7 @@ class L_Stack {
             return;
         }
         Node *temp = top;
-        cout << "Popped" << top->data << endl;
+        cout << "Popped: " << top->data << endl;
         top = top->next;
         delete temp;
         size--;
@@ -118,11 +118,11 @@ int main() {
     array_stack.pop();
     linked_list_stack.pop();
 
-    cout << "Array Stack Empty?: " << array_stack.isEmpty() << endl;
-    cout << "Linked List Stack Empty?: " << linked_list_stack.isEmpty() << endl;
+    cout << "Array Stack Empty?: " << (array_stack.isEmpty() ? "True" : "False") << endl;
+    cout << "Linked List Stack Empty?: " << (linked_list_stack.isEmpty() ? "True" : "False") << endl;
 
-    cout << "Array Stack Empty?: " << array_stack.isFull() << endl;
-    cout << "Linked List Stack Empty?: " << linked_list_stack.isFull() << endl;
+    cout << "Array Stack Empty?: " << (array_stack.isFull() ? "True" : "False") << endl;
+    cout << "Linked List Stack Empty?: " << (linked_list_stack.isFull() ? "True" : "False") << endl;
 
     return 0;
 }
