@@ -101,7 +101,7 @@ int main() {
     ISBN = 472020;
     lib.removeBook(ISBN);
 
-    cout << "\nAfter removal:\n";
+    cout << endl << "After removal:\n";
     lib.displayDetails();
 
     return 0;
