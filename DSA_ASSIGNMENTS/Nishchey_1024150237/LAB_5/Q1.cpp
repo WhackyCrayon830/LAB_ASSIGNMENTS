@@ -80,32 +80,33 @@ void factorialTime(int n) {
     permuteHelper(n, 0);
 }
 
-/* ================= MAIN ================= */
-
 int main() {
 
-    // O(1)
-    benchmark::benchmark(constantTime, "O1", 1, 1000000, 100000, 100000);
+    // overwrite previous outputs
+    std::remove("O1.csv");
+    std::remove("Ologn.csv");
+    std::remove("Osqrt.csv");
+    std::remove("On.csv");
+    std::remove("Onlogn.csv");
+    std::remove("On2.csv");
+    std::remove("On3.csv");
+    std::remove("O2n.csv");
+    std::remove("On_factorial.csv");
 
-    // O(log n)
-    benchmark::benchmark(logarithmicTime, "Ologn", 100, 10000000, 100000, 10000);
+    // Graph 1
+    benchmark::benchmark(constantTime, "O1", 1, 10000000, 500000, 100000);
+    benchmark::benchmark(logarithmicTime, "Ologn", 1, 10000000, 500000, 100000);
+    benchmark::benchmark(sqrtTime, "Osqrt", 1, 1000000, 50000, 10000);
+    benchmark::benchmark(linearTime, "On", 1, 200000, 5000, 1000);
+    benchmark::benchmark(nLognTime, "Onlogn", 1, 100000, 5000, 500);
 
-    // O(√n)
-    benchmark::benchmark(sqrtTime, "Osqrt_n", 100, 1000000, 10000, 1000);
+    // Graph 2
+    benchmark::benchmark(quadraticTime, "On2", 1, 5000, 100, 10);
+    benchmark::benchmark(cubicTime, "On3", 1, 500, 10, 1);
 
-    // O(n)
-    benchmark::benchmark(linearTime, "On", 1000, 50000, 1000, 1000);
-
-    // O(n log n)
-    benchmark::benchmark(nLognTime, "Onlogn", 1000, 20000, 1000, 100);
-
-    // O(n^2)
-    benchmark::benchmark(quadraticTime, "On2", 100, 2000, 100, 10);
-
-    // O(n^3)
-    benchmark::benchmark(cubicTime, "On3", 10, 100, 10, 1);
-    benchmark::benchmark(exponentialTime, "O2n", 5, 30, 1, 1);
-    benchmark::benchmark(factorialTime, "On_factorial", 3, 8, 1, 1);
+    // Graph 3
+    benchmark::benchmark(exponentialTime, "O2n", 1, 35, 1, 1);
+    benchmark::benchmark(factorialTime, "On_factorial", 1, 10, 1, 1);
 
     return 0;
 }
