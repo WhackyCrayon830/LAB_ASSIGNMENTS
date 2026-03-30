@@ -42,12 +42,7 @@ int main() {
     middleChild.spillFamilySecrets();
     neighbor.spillFamilySecrets();
 
-    // Accessible only in public inheritance
     cout << "Access from main: " << closeChild.noSecret << endl;
-
-    // ❌ These would give errors:
-    // cout << middleChild.noSecret << endl;  // protected inheritance
-    // cout << neighbor.noSecret << endl;     // private inheritance
 
     return 0;
 }
