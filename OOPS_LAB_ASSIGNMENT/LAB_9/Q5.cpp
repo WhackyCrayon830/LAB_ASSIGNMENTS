@@ -1,16 +1,22 @@
+#include <fstream>
 #include <iostream>
+
 using namespace std;
 
-template <typename T> int linearSearch(T arr[], int n, T key) {
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == key)
-            return i;
-    }
-    return -1;
-}
-
 int main() {
-    int arr[] = {9, 0, 7, 2, 4, 1};
-    cout << linearSearch(arr, 6, 2);
-    return 0;
+  string input;
+  cout << "Enter a string: ";
+  cin >> input;
+
+  int length = input.length();
+  ofstream os("IO.txt");
+  os << input;
+  os.close();
+  ifstream is("IO.txt");
+  char ch;
+  cout << "Writing from the file: ";
+  while (is.get(ch)) {
+    cout << ch;
+  }
+  return 0;
 }
